@@ -1,0 +1,8 @@
+[23-Apr-2019 17:16:38 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'luckykx4_jobfoxi.jobpages' doesn't exist in /home/luckykx4/public_html/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php:117
+Stack trace:
+#0 /home/luckykx4/public_html/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php(117): PDOStatement->execute(NULL)
+#1 /home/luckykx4/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php(330): Doctrine\DBAL\Driver\PDOStatement->execute()
+#2 /home/luckykx4/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php(657): Illuminate\Database\Connection->Illuminate\Database\{closure}('select * from `...', Array)
+#3 /home/luckykx4/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\Database\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#4 /home/luckykx4/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php(333): Illuminate\Database\Connection->r in /home/luckykx4/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 664
+[27-Apr-2019 15:50:21 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 83042250 bytes) in /home/luckykx4/public_html/vendor/intervention/image/src/Intervention/Image/AbstractDecoder.php on line 235
