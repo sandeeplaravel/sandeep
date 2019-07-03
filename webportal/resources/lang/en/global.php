@@ -872,6 +872,14 @@ return [
 	'The ad is already offline.' => 'The ad is already offline.',
     'The phone has already been taken.' => 'The phone has already been taken.',//Added by Vimal
     'The email has already been taken.' => 'The email has already been taken.',//Added by Vimal
+    'Min' => 'Min',//Added by Vimal
+    'Max' => 'Max',//Added by Vimal
+    'Search by Keyword' => 'Search by Keyword',//Added by Vimal
+    'Education' => 'Education',//Added by Vimal
+    'Current CTC' => 'Current CTC',//Added by Vimal
+    'Total Experience' => 'Total Experience',//Added by Vimal
+    'Search For Candidate' => 'Search For Candidate',//Added by Vimal
+    'Resume Search' => 'Resume Search',//Added by Vimal
 
 
 

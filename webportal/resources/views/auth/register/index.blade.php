@@ -180,7 +180,7 @@
 															   placeholder="{{ (!isEnabledField('email')) ? t('Mobile Phone Number') : t('Phone Number') }}"
 															   class="form-control input-md{{ $phoneError }}"
 															   type="text"
-															   onkeyup="if(this.value.length >= 10)checkPhoneExist(this.value);" 
+															   onfocusout="if(this.value.length >= 10)checkPhoneExist(this.value);" 
 															   value="{{ phoneFormat(old('phone'), old('country', config('country.code'))) }}"
 														>
 
@@ -216,7 +216,7 @@
 														<input id="email"
 															   name="email"
 															   type="email"
-															   onkeyup="checkEmailExist(this.value);"
+															   onfocusout="checkEmailExist(this.value);"
 															   class="form-control{{ $emailError }}"
 															   placeholder="{{ t('Email') }}"
 															   value="{{ old('email') }}"

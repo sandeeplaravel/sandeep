@@ -99,8 +99,8 @@ if (getSegment(1) != trans('routes.countries')) {
 				
 				<ul class="nav navbar-nav ml-auto navbar-right">
 					<li class="nav-item postadd ">
-						<a class="btn btn-block btn-post btn-add-listing" href="javascript:void();">
-							Resume Search
+						<a class="btn btn-block btn-post btn-add-listing" href="{{ url('search-resume') }}">
+							{{ t('Resume Search') }}
 						</a>	
 					</li>
 					<!-- Fixed Items irrespective of whether user is logged in or not -->

@@ -182,6 +182,10 @@ Route::group([
 		// HOMEPAGE
 		Route::get('/', 'HomeController@index');
 		Route::get(LaravelLocalization::transRoute('routes.countries'), 'CountriesController@index');
+
+		//Added by Vimal
+		Route::get('search-resume', 'ResumeController@resumeSearch');//Resume search Routes...
+		//Added by Vimal
 		
 		
 		// AUTH

@@ -48,6 +48,9 @@
 			<link rel="alternate" href="{{ LaravelLocalization::getLocalizedURL($localeCode) }}" hreflang="{{ strtolower($localeCode) }}"/>
 		@endif
 	@endforeach
+
+	{{-- Condtion added vy Vimal--}}
+	@if ((Request::getRequestUri()) != '/search-resume')
 	@if (count($dnsPrefetch) > 0)
 		@foreach($dnsPrefetch as $dns)
 			<link rel="dns-prefetch" href="//{{ $dns }}">
@@ -78,6 +81,9 @@
 	@if (config('settings.seo.alexa_verify_id'))
 		<meta name="alexaVerifyID" content="{{ config('settings.seo.alexa_verify_id') }}" />
 	@endif
+
+	@endif
+	{{--endif added by Vim al--}}
 	
 	@yield('before_styles')
 	
