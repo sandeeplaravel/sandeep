@@ -49,15 +49,8 @@
 									<div class="card-body">
 										<form name="details" class="form-horizontal" role="form" method="POST" action="{{ url()->current() }}" enctype="multipart/form-data">
 											{!! csrf_field() !!}
-											<input name="_method" type="hidden" value="PUT">
-											<input name="panel" type="hidden" value="userPanel">
-                                            
-                                            
-                                                
-                                                
-                                            
-
-                                                
+											<!-- <input name="_method" type="hidden" value="PUT">
+											<input name="panel" type="hidden" value="userPanel"> -->
     
                                                 <!-- Search by Keyword -->
 												<?php $searchByKeywordError = (isset($errors) and $errors->has('search_by_keyword')) ? ' is-invalid' : ''; ?>
@@ -81,9 +74,19 @@
 												<?php $educationError = (isset($errors) and $errors->has('education')) ? ' is-invalid' : ''; ?>
                                                 <div class="form-group row required">
                                                     <label class="col-md-3 col-form-label">{{ t('Education') }}: </label>
-                                                    <div class="col-md-9">
+                                                    <!-- <div class="col-md-9">
                                                         <input name="education" type="text" class="form-control{{ $educationError }}" placeholder="" value="">
-                                                    </div>
+                                                    </div> -->
+                                                    <div class="col-md-9">
+	                                                    <select id="education" name="education" class="form-control sselecter{{ $educationError }}">
+															<option value="0"> {{ t('Select a degree') }} </option>
+															@foreach ($degree as $item)
+																<option value="{{ $item->id }}">
+																	{{ $item->name }}
+																</option>
+															@endforeach
+														</select>
+													</div>
                                                 </div>
     
     											<!-- Total experience -->
@@ -111,11 +114,7 @@
                                                     </div>
                                                 </div>
                                                 
-                                            
-                                            	
-                                           
-                                            
-                                            <?php $prefered_locationError = (isset($errors) and $errors->has('prefered_location')) ? ' is-invalid' : ''; ?>
+                                            	<?php $prefered_locationError = (isset($errors) and $errors->has('prefered_location')) ? ' is-invalid' : ''; ?>
                                                 <div class="form-group row required">
                                                     <label class="col-md-3 col-form-label">{{ t('Prefered Location') }}:</label>
 													<div class="input-group col-md-9">
@@ -130,16 +129,16 @@
 													</div>
                                                 </div>
                                             
-											<div class="form-group row">
-												<div class="offset-md-3 col-md-9"></div>
-											</div>
-											
-											<!-- Button -->
-											<div class="form-group row">
-												<div class="offset-md-3 col-md-9">
-													<button style="" type="submit" class="btn btn-info">{{ t('Search For Candidate') }}</button>
+												<div class="form-group row">
+													<div class="offset-md-3 col-md-9"></div>
 												</div>
-											</div>
+												
+												<!-- Button -->
+												<div class="form-group row">
+													<div class="offset-md-3 col-md-9">
+														<button style="" type="submit" class="btn btn-info">{{ t('Search For Candidate') }}</button>
+													</div>
+												</div>
 										</form>
 									</div>
 								</div>

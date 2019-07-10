@@ -880,6 +880,10 @@ return [
     'Total Experience' => 'Total Experience',//Added by Vimal
     'Search For Candidate' => 'Search For Candidate',//Added by Vimal
     'Resume Search' => 'Resume Search',//Added by Vimal
+    'Candidate Search Results' => 'Candidate Search Results',//Added by Vimal
+    'No jobs.' => 'No jobs.',//Added by Vimal
+    'Experience' => 'Experience',//Added by Vimal
+    'Prefered Location' => 'Prefered Location',//Added by Vimal
 
 
 

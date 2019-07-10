@@ -53,7 +53,7 @@ if (isset($originForm)) {
 			<input name="start"
 				   placeholder="{{ t('Start') }}"
 				   class="form-control input-md{{ $startError }}"
-				   type="text"
+				   type="date"
 				   value="{{ old('experience.start', (isset($experience->start) ? $experience->start : '')) }}">
 		</div>
 	</div>
@@ -66,7 +66,7 @@ if (isset($originForm)) {
 			<input name="end"
 				   placeholder="{{ t('End') }}"
 				   class="form-control input-md{{ $endError }}"
-				   type="text"
+				   type="date"
 				   value="{{ old('experience.end', (isset($experience->end) ? $experience->end : '')) }}">
 		</div>
 	</div>
